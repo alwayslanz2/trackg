@@ -2,7 +2,7 @@
 1. pkg update && pkg upgrade -y
 2. pkg install git -y
 3. pkg install python -y
-4. pkg install Cloudflared
+4. pkg install cloudflared
 5. git clone https://github.com/alwayslanz2/trackg.git
 6. cd trackg
 7. pkg install requests
