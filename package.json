@@ -1,0 +1,10 @@
+{
+  "name": "geotracker-cloudflared",
+  "version": "1.0.0",
+  "description": "Cloudflared tunnel manager for GeoTracker Bot",
+  "scripts": {
+    "install-cf": "curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm -o cloudflared && chmod +x cloudflared",
+    "start-tunnel": "./cloudflared tunnel --url http://localhost:8080"
+  },
+  "dependencies": {}
+}
